@@ -1,0 +1,336 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link
+            rel="apple-touch-icon"
+            type="image/png"
+            href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png"
+        />
+        <meta name="apple-mobile-web-app-title" content="CodePen" />
+        <link
+            rel="shortcut icon"
+            git
+            con
+            type="image/x-icon"
+            href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico"
+        />
+        <link
+            rel="mask-icon"
+            type="image/x-icon"
+            href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg"
+            color="#111"
+        />
+        <title>DDUC Coding League</title>
+        <style>
+            @import url("https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:900");
+            @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+            html {
+                display: grid;
+                min-height: 100%;
+            }
+
+            body {
+                display: grid;
+                background: #183059;
+            }
+            .header {
+                padding-top: 4%;
+            }
+
+            .header h1 {
+                position: relative;
+                padding: 0;
+                margin: 0;
+                font-family: "Lato", sans-serif;
+                font-weight: 300;
+                font-size: 40px;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+                color: #080808;
+                -webkit-transition: all 0.4s ease 0s;
+                -o-transition: all 0.4s ease 0s;
+                transition: all 0.4s ease 0s;
+            }
+
+            .header h1 span {
+                display: block;
+                font-size: 0.5em;
+                line-height: 1.3;
+            }
+            .header h1 em {
+                font-style: normal;
+                font-weight: 600;
+                color: rgba(255, 255, 255);
+            }
+
+            .four h1 {
+                text-align: center;
+                padding-bottom: 0.7em;
+                color: rgb(231, 231, 231);
+            }
+            .four h1 span {
+                font-weight: 300;
+                word-spacing: 3px;
+                line-height: 2em;
+                padding-bottom: 0.35em;
+                color: rgba(255, 255, 255, 0.5);
+            }
+            .four h1:before {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 60px;
+                height: 1px;
+                content: "";
+                left: 50%;
+                margin-left: -30px;
+                background-color: rgb(167, 0, 0);
+            }
+            .container {
+                position: relative;
+                margin: auto;
+                overflow: hidden;
+                width: 650px;
+                height: 260px;
+            }
+
+            .container h1 {
+                font-family: "Lato", sans-serif;
+                text-align: center;
+                margin-top: 2em;
+                font-size: 1em;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+                color: #f6f4f3;
+            }
+
+            #timer {
+                color: #f6f4f3;
+                text-align: center;
+                text-transform: uppercase;
+                font-family: "Lato", sans-serif;
+                font-size: 0.7em;
+                letter-spacing: 5px;
+                margin-top: 10%;
+            }
+
+            .days,
+            .hours,
+            .minutes,
+            .seconds {
+                display: inline-block;
+                padding: 20px;
+                width: 100px;
+                border-radius: 5px;
+            }
+
+            .days {
+                background: #ef2f3c;
+            }
+
+            .hours {
+                background: #f6f4f3;
+                color: #183059;
+            }
+
+            .minutes {
+                background: #276fbf;
+            }
+
+            .seconds {
+                background: #f0a202;
+            }
+
+            .numbers {
+                font-family: "Montserrat", sans-serif;
+                color: #183059;
+                font-size: 4em;
+            }
+
+            .cards {
+                padding: 3% 3% 3% 3%;
+            }
+
+            .cards h1 {
+                font-family: "Lato", sans-serif;
+                text-align: center;
+                color: #f6f4f3;
+            }
+
+            .cards li {
+                font-family : "Raleway", sans-serif;
+                color: rgba(255,255,255,0.7);
+                margin-top : 7px;
+            }
+
+            footer {
+                position: fixed;
+                bottom: 0;
+                right: 0;
+                text-transform: uppercase;
+                padding: 10px;
+                font-family: "Lato", sans-serif;
+                font-size: 0.7em;
+            }
+
+            footer p {
+                letter-spacing: 3px;
+                color: #ef2f3c;
+            }
+
+            footer a {
+                color: #f6f4f3;
+                text-decoration: none;
+            }
+
+            footer a:hover {
+                color: #276fbf;
+            }
+        </style>
+
+        <script>
+            window.console = window.console || function (t) {};
+        </script>
+
+        <script>
+            if (document.location.search.match(/type=embed/gi)) {
+                window.parent.postMessage("resize", "*");
+            }
+        </script>
+    </head>
+
+    <body translate="no">
+        <div class="header four">
+            <h1>
+                <span>DDUC CodeChef Chapter presents</span> DDUC
+                <em>Coding</em> League
+            </h1>
+        </div>
+        <div class="container">
+            <div id="timer">
+                <div class="days">
+                    <div class="numbers"></div>
+                    days
+                </div>
+                <div class="hours">
+                    <div class="numbers"></div>
+                    hours
+                </div>
+                <div class="minutes">
+                    <div class="numbers"></div>
+                    minutes
+                </div>
+                <div class="seconds">
+                    <div class="numbers"></div>
+                    seconds
+                </div>
+            </div>
+            <h1>until the league begins</h1>
+        </div>
+        <div class="cards">
+            <div class="card1" id="card1">
+                <h1>Participation Requirements</h1>
+                <ul>
+                    <li>
+                        Must have a CodeChef account. If you don't have a
+                        CodeChef account, please create one
+                        <a href="https://www.codechef.com/signup">here.</a>
+                    </li>
+                    <li>
+                        Must be registered as a Community Member of CodeChef
+                        DDUC Chapter. You can do that
+                        <a
+                            href="https://www.codechef.com/college-chapter/member"
+                            >here.</a
+                        >
+                    </li>
+                </ul>
+            </div>
+            <div class="card2" id="card2">
+                <h1>Rules and Regulations</h1>
+                <ul>
+                    <li>
+                        Scores from the 4 monthly contests of CodeChef, i.e,
+                        Long Challenge, Lunchtime, Cook-off and Starters, aloong
+                        with the contests hosted by DDUC Chapter will be
+                        considered.
+                    </li>
+                    <li>
+                        All the scores will be converted to factors of 100, so
+                        no change in the scores of Long Challenge, Staters or
+                        Lunchtime.
+                    </li>
+                    <li>
+                        For Cook-Off and similar contests with ICPC Ranklists,
+                        the final score will be multiplied by 100 and the no. of
+                        wrong submissions will be subtracted from it. E.g.:
+                        Score of 7(4) will be 700-4 = 796
+                    </li>
+                    <li>
+                        Ties will be resolved on a bi-monthly basis, i.e., every
+                        2 months and will be in form of isolated lockouts
+                        between tied players.
+                    </li>
+                    <li>
+                        1 - 2 month(s) of complete inactivity on CodeChef might
+                        result in elimination from the leaderboard, so make sure
+                        to participate in at least one contest every month.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Script for countdown timer -->
+        <script id="rendered-js">
+            const year = new Date().getFullYear();
+            const leagueBegin = new Date(year, 1, 1).getTime();
+            const leagueBeginNextYear = new Date(year + 1, 1, 1).getTime();
+            const month = new Date().getMonth();
+
+            // countdown
+            let timer = setInterval(function () {
+                // get today's date
+                const today = new Date().getTime();
+
+                // get the difference
+                let diff;
+                if (month > 1) {
+                    diff = leagueBeginNextYear - today;
+                } else {
+                    diff = leagueBegin - today;
+                }
+
+                // math
+                let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                let hours = Math.floor(
+                    (diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+                );
+                let minutes = Math.floor(
+                    (diff % (1000 * 60 * 60)) / (1000 * 60)
+                );
+                let seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+                // display
+                document.getElementById("timer").innerHTML =
+                    '<div class="days"> \
+  <div class="numbers">' +
+                    days +
+                    '</div>days</div> \
+<div class="hours"> \
+  <div class="numbers">' +
+                    hours +
+                    '</div>hours</div> \
+<div class="minutes"> \
+  <div class="numbers">' +
+                    minutes +
+                    '</div>minutes</div> \
+<div class="seconds"> \
+  <div class="numbers">' +
+                    seconds +
+                    "</div>seconds</div> \
+</div>";
+            }, 1000);
+        </script>
+    </body>
+</html>
