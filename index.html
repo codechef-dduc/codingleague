@@ -1,165 +1,18 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link
             rel="icon"
             href="https://i.imgur.com/Pu4Jiths.png"
             type="image/png"
         />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <link rel="stylesheet" href="style.css" />
         <title>DDUC Coding League</title>
-        <style>
-            @import url("https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:900");
-            @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
-
-            html {
-                display: grid;
-                min-height: 100%;
-            }
-
-            body {
-                display: grid;
-                background: #183059;
-            }
-            .header {
-                padding-top: 4%;
-            }
-
-            .header h1 {
-                position: relative;
-                padding: 0;
-                margin: 0;
-                font-family: "Lato", sans-serif;
-                font-weight: 300;
-                font-size: 40px;
-                text-transform: uppercase;
-                letter-spacing: 5px;
-                color: #080808;
-                -webkit-transition: all 0.4s ease 0s;
-                -o-transition: all 0.4s ease 0s;
-                transition: all 0.4s ease 0s;
-            }
-
-            .header h1 span {
-                display: block;
-                font-size: 0.5em;
-                line-height: 1.3;
-            }
-            .header h1 em {
-                font-style: normal;
-                font-weight: 600;
-                color: rgba(255, 255, 255);
-            }
-
-            .four h1 {
-                text-align: center;
-                padding-bottom: 0.7em;
-                color: rgb(231, 231, 231);
-            }
-            .four h1 span {
-                font-weight: 300;
-                word-spacing: 3px;
-                line-height: 2em;
-                padding-bottom: 0.35em;
-                color: rgba(255, 255, 255, 0.5);
-            }
-            .four h1:before {
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                width: 60px;
-                height: 1px;
-                content: "";
-                left: 50%;
-                margin-left: -30px;
-                background-color: rgb(167, 0, 0);
-            }
-            .container {
-                position: relative;
-                margin: auto;
-                overflow: hidden;
-                width: 650px;
-                height: 260px;
-            }
-
-            .container h1 {
-                font-family: "Lato", sans-serif;
-                text-align: center;
-                margin-top: 2em;
-                font-size: 1em;
-                text-transform: uppercase;
-                letter-spacing: 5px;
-                color: #f6f4f3;
-            }
-
-            #timer {
-                color: #f6f4f3;
-                text-align: center;
-                text-transform: uppercase;
-                font-family: "Lato", sans-serif;
-                font-size: 0.7em;
-                letter-spacing: 5px;
-                margin-top: 10%;
-            }
-
-            .days,
-            .hours,
-            .minutes,
-            .seconds {
-                display: inline-block;
-                padding: 20px;
-                width: 100px;
-                border-radius: 5px;
-            }
-
-            .days {
-                background: #ef2f3c;
-            }
-
-            .hours {
-                background: #f6f4f3;
-                color: #183059;
-            }
-
-            .minutes {
-                background: #276fbf;
-            }
-
-            .seconds {
-                background: #f0a202;
-            }
-
-            .numbers {
-                font-family: "Montserrat", sans-serif;
-                color: #183059;
-                font-size: 4em;
-            }
-
-            .cards {
-                padding: 3% 3% 3% 3%;
-                max-width: 700px;
-                position: relative;
-                margin: auto;
-                font-size: 0.9em;
-            }
-
-            .cards h1 {
-                font-family: "Lato", sans-serif;
-                text-align: center;
-                color: #f6f4f3;
-            }
-
-            .cards li {
-                font-family: "Raleway", sans-serif;
-                color: rgba(255, 255, 255, 0.7);
-                margin-top: 7px;
-            }
-
-            .cards a {
-                color: #f6f4f3;
-            }
-
-        </style>
-
         <script>
             window.console = window.console || function (t) {};
         </script>
@@ -197,7 +50,7 @@
                     seconds
                 </div>
             </div>
-            <h1>until the league begins</h1>
+            <h1>until the league begins on 1st JAN 2022</h1>
         </div>
         <div class="cards">
             <div class="card1" id="card1">
@@ -206,15 +59,22 @@
                     <li>
                         Must have a CodeChef account. If you don't have a
                         CodeChef account, please create one
-                        <a href="https://www.codechef.com/signup">here.</a>
+                        <a
+                            href="https://www.codechef.com/signup"
+                            target="_blank"
+                            >here.</a
+                        >
                     </li>
                     <li>
                         Must be registered as a Community Member of CodeChef
                         DDUC Chapter. You can do that
                         <a
                             href="https://www.codechef.com/college-chapter/member"
-                            >here.</a
-                        >
+                            target="_blank"
+                            >here</a
+                        >. Once you do that, you will be added to CodeChef
+                        Chapter Community social media groups, if not already
+                        there.
                     </li>
                 </ul>
             </div>
@@ -251,7 +111,28 @@
                 </ul>
             </div>
         </div>
-
+        <footer>
+            <a
+                class="fa fa-lg fa-envelope-square"
+                href="mailto:codechefchapter.dduc@gmail.com"
+                target="_blank"
+            ></a>
+            <a
+                class="fa fa-lg fa-linkedin"
+                href="https://www.linkedin.com/company/codechef-dduc-chapter"
+                target="_blank"
+            ></a>
+            <a
+                class="fa fa-lg fa-github-square"
+                href="https://github.com/codechef-dduc"
+                target="_blank"
+            ></a>
+            <a
+                class="fa fa-lg fa-instagram"
+                href="https://instagram.com/dduc_codechefchapter?utm_medium=copy_link"
+                target="_blank"
+            ></a>
+        </footer>
         <!-- Script for countdown timer -->
         <script id="rendered-js">
             const year = new Date().getFullYear();
