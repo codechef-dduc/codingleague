@@ -136,6 +136,10 @@
 
             .cards {
                 padding: 3% 3% 3% 3%;
+                max-width: 700px;
+                position: relative;
+                margin: auto;
+                font-size: 0.9em;
             }
 
             .cards h1 {
@@ -154,18 +158,6 @@
                 color: #f6f4f3;
             }
 
-            @media only screen and (min-width: 768px) {
-                .cards {
-                    width: 75%;
-                    position: relative;
-                    margin: auto;
-                }
-
-                .cards ul {
-                    list-style-type: none;
-                    text-align: center;
-                }
-            }
         </style>
 
         <script>
@@ -263,8 +255,8 @@
         <!-- Script for countdown timer -->
         <script id="rendered-js">
             const year = new Date().getFullYear();
-            const leagueBegin = new Date(year, 1, 1).getTime();
-            const leagueBeginNextYear = new Date(year + 1, 1, 1).getTime();
+            const leagueBegin = new Date(year, 0, 1).getTime();
+            const leagueBeginNextYear = new Date(year + 1, 0, 1).getTime();
             const month = new Date().getMonth();
 
             // countdown
