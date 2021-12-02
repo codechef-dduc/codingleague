@@ -6,6 +6,10 @@
             href="https://i.imgur.com/Pu4Jiths.png"
             type="image/png"
         />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
         <title>DDUC Coding League</title>
         <style>
             @import url("https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:900");
@@ -158,6 +162,22 @@
                 color: #f6f4f3;
             }
 
+            @media only screen and (max-width: 600px) {
+                footer {
+                    margin: auto;
+                    position: relative;
+                    color: #f6f4f3;
+                }
+                footer .fa {
+                    margin: 25px 15px 25px 15px;
+                    font-size: 2em;
+                }
+                footer a {
+                    text-decoration: none;
+                    color: inherit;
+                    transition: transform 0.2s;
+                }
+            }
         </style>
 
         <script>
@@ -251,7 +271,24 @@
                 </ul>
             </div>
         </div>
-
+        <footer>
+            <a
+                class="fa fa-lg fa-envelope-square"
+                href="mailto:codechefchapter.dduc@gmail.com"
+            ></a>
+            <a
+                class="fa fa-lg fa-linkedin"
+                href="https://www.linkedin.com/company/codechef-dduc-chapter"
+            ></a>
+            <a
+                class="fa fa-lg fa-github-square"
+                href="https://github.com/codechef-dduc"
+            ></a>
+            <a
+                class="fa fa-lg fa-instagram"
+                href="https://instagram.com/dduc_codechefchapter?utm_medium=copy_link"
+            ></a>
+        </footer>
         <!-- Script for countdown timer -->
         <script id="rendered-js">
             const year = new Date().getFullYear();
