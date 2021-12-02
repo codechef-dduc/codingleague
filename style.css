@@ -68,7 +68,7 @@ body {
     margin: auto;
     overflow: hidden;
     width: 650px;
-    height: 260px;
+    height: 250px;
 }
 
 .container h1 {
@@ -88,7 +88,7 @@ body {
     font-family: "Lato", sans-serif;
     font-size: 0.7em;
     letter-spacing: 5px;
-    margin-top: 10%;
+    margin-top: 7%;
 }
 
 .days,
@@ -135,6 +135,7 @@ body {
 .cards h1 {
     font-family: "Lato", sans-serif;
     text-align: center;
+    margin-top: auto;
     color: #f6f4f3;
 }
 
