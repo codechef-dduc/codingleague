@@ -171,7 +171,7 @@ body {
 
     .airtable-embed {
         width: 85%;
-        height: auto;
+        height: 600px;
     }
 }
 
