@@ -1,188 +1,163 @@
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width" />
-        <link
-            rel="icon"
-            href="https://i.imgur.com/Pu4Jiths.png"
-            type="image/png"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        />
-        <link rel="stylesheet" href="style.css" />
-        <title>DDUC Coding League</title>
-        <script>
-            window.console = window.console || function (t) {};
-        </script>
 
-        <script>
-            if (document.location.search.match(/type=embed/gi)) {
-                window.parent.postMessage("resize", "*");
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="https://i.imgur.com/Pu4Jiths.png" type="image/png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>DDUC Coding League</title>
+    <script>
+        window.console = window.console || function (t) { };
+    </script>
+
+    <script>
+        if (document.location.search.match(/type=embed/gi)) {
+            window.parent.postMessage("resize", "*");
+        }
+    </script>
+</head>
+
+<body translate="no">
+    <div class="header four">
+        <h1>
+            <span>DDUC CodeChef Chapter presents</span> DDUC
+            <em>Coding</em> League
+        </h1>
+    </div>
+    <div class="container">
+        <div id="timer">
+            <div class="days">
+                <div class="numbers"></div>
+                days
+            </div>
+            <div class="hours">
+                <div class="numbers"></div>
+                hours
+            </div>
+            <div class="minutes">
+                <div class="numbers"></div>
+                minutes
+            </div>
+            <div class="seconds">
+                <div class="numbers"></div>
+                seconds
+            </div>
+        </div>
+        <h1>until the league ends on 31st APRIL 2022</h1>
+        <h1>Visit the <a href="leaderboard.html">leaderboard</a></h1>
+    </div>
+    <div class="cards">
+        <div class="card1" id="card1">
+            <h1>Participation Requirements</h1>
+            <ul>
+                <li>
+                    Must have a CodeChef account. If you don't have a
+                    CodeChef account, please create one
+                    <a href="https://www.codechef.com/signup" target="_blank">here.</a>
+                </li>
+                <li>
+                    Must be registered as a Community Member of CodeChef
+                    DDUC Chapter. You can do that
+                    <a href="https://www.codechef.com/college-chapter/member" target="_blank">here</a>. Once you do
+                    that, you will be added to CodeChef
+                    Chapter Community social media groups, if not already
+                    there.
+                </li>
+            </ul>
+        </div>
+        <div class="card2" id="card2">
+            <h1>Rules and Regulations</h1>
+            <ul>
+                <li>
+                    Scores from the 4 monthly contests of CodeChef, i.e,
+                    Long Challenge, Lunchtime, Cook-off and Starters, aloong
+                    with the contests hosted by DDUC Chapter will be
+                    considered.
+                </li>
+                <li>
+                    All the scores will be converted to factors of 100, so
+                    no change in the scores of Long Challenge, Staters or
+                    Lunchtime.
+                </li>
+                <li>
+                    For Cook-Off and similar contests with ICPC Ranklists,
+                    the final score will be multiplied by 100 and the no. of
+                    wrong submissions will be subtracted from it. E.g.:
+                    Score of 7(4) will be 700-4 = 696
+                </li>
+                <li>
+                    Ties will be resolved on a bi-monthly basis, i.e., every
+                    2 months and will be in form of isolated lockouts
+                    between tied players.
+                </li>
+                <li>
+                    1 - 2 month(s) of complete inactivity on CodeChef might
+                    result in elimination from the leaderboard, so make sure
+                    to participate in at least one contest every month.
+                </li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <a class="fa fa-lg fa-envelope-square" href="mailto:codechefchapter.dduc@gmail.com" target="_blank"></a>
+        <a class="fa fa-lg fa-linkedin" href="https://www.linkedin.com/company/codechef-dduc-chapter"
+            target="_blank"></a>
+        <a class="fa fa-lg fa-github-square" href="https://github.com/codechef-dduc" target="_blank"></a>
+        <a class="fa fa-lg fa-instagram" href="https://instagram.com/dduc_codechefchapter?utm_medium=copy_link"
+            target="_blank"></a>
+    </footer>
+    <!-- Script for countdown timer -->
+    <script id="rendered-js">
+        const year = new Date().getFullYear();
+        const leagueBegin = new Date(year, 3, 31).getTime();
+        const leagueBeginNextYear = new Date(year + 1, 3, 31).getTime();
+        const month = new Date().getMonth();
+
+        // countdown
+        let timer = setInterval(function () {
+            // get today's date
+            const today = new Date().getTime();
+
+            // get the difference
+            let diff;
+            if (month > 1) {
+                diff = leagueBeginNextYear - today;
+            } else {
+                diff = leagueBegin - today;
             }
-        </script>
-    </head>
 
-    <body translate="no">
-        <div class="header four">
-            <h1>
-                <span>DDUC CodeChef Chapter presents</span> DDUC
-                <em>Coding</em> League
-            </h1>
-        </div>
-        <div class="container">
-            <div id="timer">
-                <div class="days">
-                    <div class="numbers"></div>
-                    days
-                </div>
-                <div class="hours">
-                    <div class="numbers"></div>
-                    hours
-                </div>
-                <div class="minutes">
-                    <div class="numbers"></div>
-                    minutes
-                </div>
-                <div class="seconds">
-                    <div class="numbers"></div>
-                    seconds
-                </div>
-            </div>
-            <h1>until the league ends on 31st APRIL 2022</h1>
-        </div>
-        <div class="cards">
-            <div class="card1" id="card1">
-                <h1>Participation Requirements</h1>
-                <ul>
-                    <li>
-                        Must have a CodeChef account. If you don't have a
-                        CodeChef account, please create one
-                        <a
-                            href="https://www.codechef.com/signup"
-                            target="_blank"
-                            >here.</a
-                        >
-                    </li>
-                    <li>
-                        Must be registered as a Community Member of CodeChef
-                        DDUC Chapter. You can do that
-                        <a
-                            href="https://www.codechef.com/college-chapter/member"
-                            target="_blank"
-                            >here</a
-                        >. Once you do that, you will be added to CodeChef
-                        Chapter Community social media groups, if not already
-                        there.
-                    </li>
-                </ul>
-            </div>
-            <div class="card2" id="card2">
-                <h1>Rules and Regulations</h1>
-                <ul>
-                    <li>
-                        Scores from the 4 monthly contests of CodeChef, i.e,
-                        Long Challenge, Lunchtime, Cook-off and Starters, aloong
-                        with the contests hosted by DDUC Chapter will be
-                        considered.
-                    </li>
-                    <li>
-                        All the scores will be converted to factors of 100, so
-                        no change in the scores of Long Challenge, Staters or
-                        Lunchtime.
-                    </li>
-                    <li>
-                        For Cook-Off and similar contests with ICPC Ranklists,
-                        the final score will be multiplied by 100 and the no. of
-                        wrong submissions will be subtracted from it. E.g.:
-                        Score of 7(4) will be 700-4 = 696
-                    </li>
-                    <li>
-                        Ties will be resolved on a bi-monthly basis, i.e., every
-                        2 months and will be in form of isolated lockouts
-                        between tied players.
-                    </li>
-                    <li>
-                        1 - 2 month(s) of complete inactivity on CodeChef might
-                        result in elimination from the leaderboard, so make sure
-                        to participate in at least one contest every month.
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <footer>
-            <a
-                class="fa fa-lg fa-envelope-square"
-                href="mailto:codechefchapter.dduc@gmail.com"
-                target="_blank"
-            ></a>
-            <a
-                class="fa fa-lg fa-linkedin"
-                href="https://www.linkedin.com/company/codechef-dduc-chapter"
-                target="_blank"
-            ></a>
-            <a
-                class="fa fa-lg fa-github-square"
-                href="https://github.com/codechef-dduc"
-                target="_blank"
-            ></a>
-            <a
-                class="fa fa-lg fa-instagram"
-                href="https://instagram.com/dduc_codechefchapter?utm_medium=copy_link"
-                target="_blank"
-            ></a>
-        </footer>
-        <!-- Script for countdown timer -->
-        <script id="rendered-js">
-            const year = new Date().getFullYear();
-            const leagueBegin = new Date(year, 3, 31).getTime();
-            const leagueBeginNextYear = new Date(year + 1, 3, 31).getTime();
-            const month = new Date().getMonth();
+            // math
+            let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            let hours = Math.floor(
+                (diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+            );
+            let minutes = Math.floor(
+                (diff % (1000 * 60 * 60)) / (1000 * 60)
+            );
+            let seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-            // countdown
-            let timer = setInterval(function () {
-                // get today's date
-                const today = new Date().getTime();
-
-                // get the difference
-                let diff;
-                if (month > 1) {
-                    diff = leagueBeginNextYear - today;
-                } else {
-                    diff = leagueBegin - today;
-                }
-
-                // math
-                let days = Math.floor(diff / (1000 * 60 * 60 * 24));
-                let hours = Math.floor(
-                    (diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-                );
-                let minutes = Math.floor(
-                    (diff % (1000 * 60 * 60)) / (1000 * 60)
-                );
-                let seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-                // display
-                document.getElementById("timer").innerHTML =
-                    '<div class="days"> \
+            // display
+            document.getElementById("timer").innerHTML =
+                '<div class="days"> \
   <div class="numbers">' +
-                    days +
-                    '</div>days</div> \
+                days +
+                '</div>days</div> \
 <div class="hours"> \
   <div class="numbers">' +
-                    hours +
-                    '</div>hours</div> \
+                hours +
+                '</div>hours</div> \
 <div class="minutes"> \
   <div class="numbers">' +
-                    minutes +
-                    '</div>minutes</div> \
+                minutes +
+                '</div>minutes</div> \
 <div class="seconds"> \
   <div class="numbers">' +
-                    seconds +
-                    "</div>seconds</div> \
+                seconds +
+                "</div>seconds</div> \
 </div>";
-            }, 1000);
-        </script>
-    </body>
+        }, 1000);
+    </script>
+</body>
+
 </html>
