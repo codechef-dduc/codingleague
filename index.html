@@ -50,7 +50,7 @@
                     seconds
                 </div>
             </div>
-            <h1>until the league begins on 1st JAN 2022</h1>
+            <h1>until the league ends on 31st APRIL 2022</h1>
         </div>
         <div class="cards">
             <div class="card1" id="card1">
@@ -136,8 +136,8 @@
         <!-- Script for countdown timer -->
         <script id="rendered-js">
             const year = new Date().getFullYear();
-            const leagueBegin = new Date(year, 0, 1).getTime();
-            const leagueBeginNextYear = new Date(year + 1, 0, 1).getTime();
+            const leagueBegin = new Date(year, 3, 31).getTime();
+            const leagueBeginNextYear = new Date(year + 1, 3, 31).getTime();
             const month = new Date().getMonth();
 
             // countdown
